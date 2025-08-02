@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting Interface</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .question {
+            border: 1px solid #cccccc;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+        .vote-buttons {
+            display: flex;
+            align-items: center;
+        }
+        .vote-buttons button {
+            margin: 5px;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Question Voting Interface</h1>
+
+    <div class="question" id="question1">
+        <h2>Is this useful to you?</h2>
+        <div class="vote-buttons">
+            <button onclick="upvote('question1')" style="color:green">Upvote</button>
+            <button onclick="downvote('question1')" style="color:red">Downvote</button>
+            <span id="votes-question1">Votes: 0</span>
+        </div>
+    </div>
+
+    <div class="question" id="question2">
+        <h2>Can I improve my coding skills?</h2>
+        <div class="vote-buttons">
+            <button onclick="upvote('question2')" style="color:green">Upvote</button>
+            <button onclick="downvote('question2')" style="color:red">Downvote</button>
+            <span id="votes-question2">Votes: 0</span>
+        </div>
+    </div>
+
+    <script>
+        const voteCounts = {
+            question1: 0,
+            question2: 0,
+        };
+
+        function upvote(questionId) {
+            voteCounts[questionId]++;
+            document.getElementById('votes-' + questionId).innerText = 'Votes: ' + voteCounts[questionId];
+        }
+
+        function downvote(questionId) {
+            voteCounts[questionId]--;
+            document.getElementById('votes-' + questionId).innerText = 'Votes: ' + voteCounts[questionId];
+        }
+    </script>
+
+</body>
+</html>

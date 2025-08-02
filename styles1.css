@@ -1,0 +1,33 @@
+.container {
+    background: rgba(0, 0, 0, 0.7); /* Slightly darker background for visibility */
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 0 20px #00ffe7;
+    max-width: 600px;
+    margin: auto;
+}
+
+.filter-group {
+    margin-bottom: 20px; /* Adds uniform space between filter groups */
+}
+
+label {
+    margin-bottom: 5px;
+    display: block; /* Ensures labels are on their own line */
+}
+
+button[type="submit"] {
+    margin-top: 20px; /* Adds margin above the button for spacing */
+    cursor: pointer;
+    padding: 12px;
+    background: #00ffe7;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    transition: background 0.3s ease;
+}
+
+/* Button hover effect */
+button[type="submit"]:hover {
+    background: #00bfa6;
+}

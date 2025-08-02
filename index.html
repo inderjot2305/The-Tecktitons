@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quick Desk</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0d1117;
+      color: #e6edf3;
+      line-height: 1.6;
+    }
+    nav.navbar {
+      background-color: #161b22;
+      display: flex;
+      align-items: center;
+      padding: 15px 30px;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    nav img {
+      height: 60px;
+    }
+    .nav-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .button-container {
+      display: inline-block;
+    }
+    .big-btn {
+      background: #238636;
+      border: none;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .big-btn:hover {
+      background: #2ea043;
+    }
+
+    .section {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background-color: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 12px;
+      padding: 20px;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.03);
+    }
+    .card h2 {
+      color: #58a6ff;
+      margin-bottom: 10px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      background-color: #161b22;
+      border-top: 1px solid #30363d;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <img src="logo.png" alt="QuickDesk Logo" />
+    <div class="nav-buttons">
+      <a href="index.html" class="button-container"><button class="big-btn">Home</button></a>
+      <a href="create_ticket.html" class="button-container"><button class="big-btn">Create Ticket</button></a>
+      <a href="ticket_status.html" class="button-container"><button class="big-btn">Ticket Status</button></a>
+      <a href="ticket_management.html" class="button-container"><button class="big-btn">Ticket Management</button></a>
+      <a href="admin.html" class="button-container"><button class="big-btn">Admin</button></a>
+      <a href="admin_comment.html" class="button-container"><button class="big-btn">Admin Comment</button></a>
+      <a href="voting.html" class="button-container"><button class="big-btn">Voting</button></a>
+      <a href="contact.html" class="button-container"><button class="big-btn">Contact</button></a>
+      <a href="login.html" class="button-container"><button class="big-btn">Get Started</button></a>
+    </div>
+  </nav>
+
+  <section class="section">
+    <h1>Welcome to QuickDesk</h1>
+    <p>QuickDesk is your reliable support ticket system — built to ensure smoother communication between users, support teams, and admins.</p>
+
+    <div class="card-container">
+
+      <div class="card">
+        <h2>Create Ticket</h2>
+        <p>End users can submit tickets with issue details, category, and screenshots. ✅ An **email notification** system instantly alerts the user when the ticket is created or updated, keeping them informed at all times.</p>
+      </div>
+
+      <div class="card">
+        <h2>Ticket Status</h2>
+        <p>Track your ticket in real time — whether it’s open, in-progress, resolved, or escalated. Helps you stay updated without needing to ask.</p>
+      </div>
+
+      <div class="card">
+        <h2>Ticket Management</h2>
+        <p>Support agents can view, prioritize, assign, and resolve incoming tickets. Ensures faster turnaround and cleaner workflows.</p>
+      </div>
+
+      <div class="card">
+        <h2>Admin Panel</h2>
+        <p>Admins can manage user roles, ticket categories, and view all system activity. Essential for maintaining organization-wide efficiency.</p>
+      </div>
+
+      <div class="card">
+        <h2>Admin Comments</h2>
+        <p>Admins can leave internal notes on tickets, ensuring support agents have the right context while responding.</p>
+      </div>
+
+      <div class="card">
+        <h2>Voting</h2>
+        <p>Users can upvote existing issues or feature requests. This helps prioritize what’s most important to the community.</p>
+      </div>
+
+      <div class="card">
+        <h2>Contact</h2>
+        <p>Need to talk to support directly? Use the contact page for quick access to email, phone, or live chat options.</p>
+      </div>
+
+      <div class="card">
+        <h2>Get Started + Help</h2>
+        <p>New here? Click <strong>Get Started</strong> to register or log in. 🆘 Need guidance? Use the integrated <strong>Help Button</strong> for tutorials, FAQs, and live assistance to make onboarding smooth.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 QuickDesk — Simplifying Support, One Ticket at a Time
+  </footer>
+</body>
+</html>

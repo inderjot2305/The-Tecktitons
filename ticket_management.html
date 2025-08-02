@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Management Interface</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Ticket Management System</h2>
+        <form id="searchForm">
+            <div class="filter-group">
+                <label for="status">Status:</label>
+                <select id="status">
+                    <option value="all">All Tickets</option>
+                    <option value="open">Open</option>
+                    <option value="closed">Closed</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="ownTickets">My Tickets:</label>
+                <input type="checkbox" id="ownTickets">
+            </div>
+            <div class="filter-group">
+                <label for="category">Category:</label>
+                <input type="text" id="category" placeholder="Enter category">
+            </div>
+            <div class="filter-group">
+                <label for="sort">Sort By:</label>
+                <select id="sort">
+                    <option value="most-replied">Most Replied</option>
+                    <option value="recently-modified">Recently Modified</option>
+                </select>
+            </div>
+            <button type="submit">Search</button>
+        </form>
+        <div id="ticketResults">
+            <!-- Ticket results will be displayed here -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

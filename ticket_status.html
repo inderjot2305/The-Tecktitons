@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Status</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ticket Status</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Ticket ID</th>
+                    <th>Submitted By</th>
+                    <th>Status</th>
+                    <th>Date Submitted</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="ticketTable">
+                <!-- Dynamic rows will be inserted here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        const tickets = [
+            { id: 1, submittedBy: "User1", status: "Open", dateSubmitted: "2023-10-01" },
+            { id: 2, submittedBy: "User2", status: "In Progress", dateSubmitted: "2023-10-02" },
+            { id: 3, submittedBy: "User3", status: "Resolved", dateSubmitted: "2023-10-03" },
+        ];
+
+        const ticketTable = document.getElementById("ticketTable");
+
+        tickets.forEach(ticket => {
+            const row = document.createElement("tr");
+            row.innerHTML = `
+                <td>${ticket.id}</td>
+                <td>${ticket.submittedBy}</td>
+                <td>${ticket.status}</td>
+                <td>${ticket.dateSubmitted}</td>
+                <td><button onclick="viewDetails(${ticket.id})">View</button></td>
+            `;
+            ticketTable.appendChild(row);
+        });
+
+        function viewDetails(id) {
+            alert(`Viewing details for ticket ID: ${id}`);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help & Support | Quick Desk </title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .help-box {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 40px;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 0 20px #0ff;
+            border: 1px solid #0ff;
+        }
+
+        h2 {
+            text-align: center;
+            font-family: 'Orbitron', sans-serif;
+            color: #00ffe7;
+            margin-bottom: 25px;
+        }
+
+        .search-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+            background: #1e1e2f;
+            color: #fff;
+            font-size: 1rem;
+            box-shadow: inset 0 0 5px #00ffe7;
+        }
+
+        .faq {
+            margin-top: 20px;
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+            border-bottom: 1px solid #00ffe7;
+            padding: 10px 0;
+        }
+
+        .faq-item button {
+            width: 100%;
+            padding: 10px;
+            background: none;
+            border: none;
+            color: #00ffe7;
+            text-align: left;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .faq-item button:hover {
+            color: #00bfa6;
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 10px;
+            background: #1e1e2f;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+
+        .contact {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .contact a {
+            text-decoration: none;
+            background-color: #00ffe7;
+            color: #000;
+            padding: 12px 25px;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+
+        .contact a:hover {
+            background-color: #00bfa6;
+        }
+
+        @media (max-width: 500px) {
+            .help-box {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="help-box">
+        <h2>Help & Support Center</h2>
+        <div class="search-container">
+            <input type="text" placeholder="Search for help articles...">
+        </div>
+
+        <div class="faq">
+            <h3>Frequently Asked Questions</h3>
+            <div class="faq-item">
+                <button onclick="toggleAnswer(1)">How do I reset my password?</button>
+                <div class="faq-answer" id="answer1">To reset your password, go to the login page and click on 'Forgot Password'. Follow the instructions sent to your email.</div>
+            </div>
+            <div class="faq-item">
+                <button onclick="toggleAnswer(2)">How can I contact support?</button>
+                <div class="faq-answer" id="answer2">You can contact support via email at support@example.com or call us at +1-800-123-4567.</div>
+            </div>
+            <div class="faq-item">
+                <button onclick="toggleAnswer(3)">Where can I find my purchase history?</button>
+                <div class="faq-answer" id="answer3">Your purchase history can be found in your account settings under 'Order History'.</div>
+            </div>
+        </div>
+
+        <div class="contact">
+            <h3>Need Further Assistance?</h3>
+            <a href="contact.html">Contact Support</a>
+        </div>
+    </div>
+
+    <script>
+        function toggleAnswer(id) {
+            var answer = document.getElementById("answer" + id);
+            if (answer.style.display === "none" || answer.style.display === "") {
+                answer.style.display = "block";
+            } else {
+                answer.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

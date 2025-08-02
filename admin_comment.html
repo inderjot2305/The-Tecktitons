@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Ticket Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .category-list, .comment-list {
+            margin-top: 20px;
+            list-style-type: none;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Admin Ticket Management</h1>
+
+    <!-- Form to Add a Comment/Update -->
+    <h2>Add Comment/Update</h2>
+    <form id="commentForm">
+        <label for="ticketId">Ticket ID:</label>
+        <input type="text" id="ticketId" name="ticketId" required>
+
+        <label for="comment">Comment/Update:</label>
+        <textarea id="comment" name="comment" rows="4" required></textarea>
+
+        <button type="submit">Submit Comment</button>
+    </form>
+
+    <!-- Form to Manage Ticket Categories -->
+    <h2>Manage Ticket Categories</h2>
+    <form id="categoryForm">
+        <label for="categoryName">Category Name:</label>
+        <input type="text" id="categoryName" name="categoryName" required>
+
+        <button type="submit">Add Category</button>
+    </form>
+    
+    <!-- Listing Categories -->
+    <h2>Current Ticket Categories</h2>
+    <ul class="category-list" id="categoryList">
+        <!-- Categories will be populated here -->
+    </ul>
+
+    <!-- Listing Comments/Updates -->
+    <h2>Recent Comments/Updates</h2>
+    <ul class="comment-list" id="commentList">
+        <!-- Comments will be populated here -->
+    </ul>
+</div>
+
+<script>
+    // JavaScript to handle form submissions and populate lists
+    document.getElementById('commentForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        // Logic to handle comment submission (e.g., AJAX call)
+        // Update commentList with new comment
+    });
+
+    document.getElementById('categoryForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        // Logic to handle category addition (e.g., AJAX call)
+        // Update categoryList with new category
+    });
+</script>
+
+</body>
+</html>
